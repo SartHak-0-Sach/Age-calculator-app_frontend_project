@@ -1,5 +1,247 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,800&display=swap");
+
+:root {
+    --primary-purple: hsl(259, 100%, 65%);
+    --primary-red-light: hsl(0, 100%, 67%);
+    --secundary-white: hsl(0, 0%, 100%);
+    --secundary-off-white: hsl(0, 0%, 94%);
+    --secundary-light-gray: hsl(0, 0%, 86%);
+    --scundary-smokey-gray: hsl(0, 1%, 44%);
+    --scundary-off-black: hsl(0, 0%, 8%);
+    --transition: all 0.4s ease;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-size: 32px;
+    font-family: "Poppins", sans-serif !important;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--secundary-off-white);
+}
+
+.wrapper {
+    width: 45vw;
+    max-width: 900px;
+    height: 70vh;
+    min-height: 580px;
+    max-height: 600px;
+    background-color: var(--secundary-white);
+    border-radius: 20px 20px 200px 20px;
+    padding: 50px 40px;
+    transition: var(--transition);
+}
+
+.wrapper:hover {
+    box-shadow: 0 2px 5px 2px var(--secundary-light-gray);
+}
+
+form {
+    margin-bottom: 60px !important;
+    transition: var(--transition);
+}
+
+label {
+    font-size: 0.45em;
+    font-weight: 600;
+    color: var(--scundary-smokey-gray);
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+input::placeholder {
+    font-size: 34px;
+    color: var(--scundary-smokey-gray) !important;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+input:focus {
+    border-color: var(--primary-purple) !important;
+    border-width: 2px !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    transition: var(--transition);
+}
+
+input {
+    height: 60px !important;
+    padding: 20px !important;
+    display: flex;
+    align-items: center;
+    font-size: 34px !important;
+    font-weight: 600 !important;
+    color: var(--scundary-off-black) !important;
+    transition: var(--transition);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.icon-btn {
+    background-color: var(--primary-purple);
+    border-radius: 100%;
+    height: auto;
+    width: 3em;
+    padding: 17px;
+    position: relative;
+    top: -60px;
+    right: -80%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.icon-btn:hover {
+    background-color: var(--scundary-off-black);
+}
+
+.validation-text {
+    margin-top: 5px;
+    font-size: 12px;
+    margin-bottom: -22px;
+    display: none;
+}
+
+hr {
+    width: 90%;
+    transition: var(--transition);
+}
+
+h1,
+span {
+    font-size: 2em;
+    font-weight: 800;
+    font-style: italic;
+    transition: var(--transition);
+}
+
+.age-info {
+    margin-top: -60px !important;
+}
+
+.color-purple {
+    color: var(--primary-purple);
+}
+
+.color-red {
+    color: var(--primary-red-light);
+}
+
+/* Dynamic classes  */
+
+.border-red {
+    border-color: var(--primary-red-light) !important;
+}
+
+.error {
+    display: block;
+}
+
+.success {
+    display: none;
+}
+
+/* Media queries  */
+
+@media (max-width: 1200px) {
+    form {
+        margin-bottom: 50px;
+    }
+
+    h1,
+    span {
+        font-size: 1.8em;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    .icon-btn {
+        width: 2em;
+        padding: 12px;
+        top: -50px;
+        right: -50%;
+        transform: translateX(-50%);
+    }
+
+    .age-info {
+        margin-top: -40px !important;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    h1,
+    span {
+        font-size: 1.6em;
+    }
+
+    .wrapper {
+        width: 60vw;
+    }
+
+}
+
+@media (max-width: 768px) {
+    input {
+        padding: 10px !important;
+        font-size: 20px !important;
+    }
+
+    input::placeholder {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrapper {
+        width: 95vw;
+    }
+
+    .age-info {
+        margin-top: 35px;
+    }
+
+    .validation-text {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    h1,
+    span {
+        font-size: 1.2em;
+    }
+
+    .wrapper {
+        padding: 50px 20px;
+    }
+
+    label {
+        font-size: 0.4em;
+    }
+
+    input {
+        font-size: 16px !important;
+    }
+
+    input::placeholder {
+        font-size: 16px;
+    }
+
 }

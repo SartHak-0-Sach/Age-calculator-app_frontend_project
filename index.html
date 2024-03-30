@@ -1,35 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Age calculator app</title>
-
-  <link rel="stylesheet" href="style.css">
-
+  <title>Frontend Mentor | Age calculator app</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
 
-  <div id="container">
-    <p>DAY</p>
-    <div id="day"><input type="text" id="dayValue" title="day" placeholder="DD"></div>
-    <p>MONTH</p>
-    <div id="month"><input type="text" id="monthValue" title="month" placeholder="MM"></div>
-    <p>YEAR</p>
-    <div id="year"><input type="text" id="yearValue" title="year" placeholder="YYYY"></div>
+  <main class="d-flex justify-content-center align-items-center">
 
-    <hr><!-- icon -->
+    <div class="wrapper">
 
-    <h1>-- </h1><h1>years</h1>
-    <h1>-- </h1><h1>months</h1>
-    <h1>-- </h1><h1>days</h1>
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-4 col-xl-3 input-control">
+          <label for="dayOfBirth" class="form-label">DAY</label>
+          <input type="number" id="dayOfBirth" class="form-control" placeholder="DD" required>
+          <div class="feedback"></div>
+        </div>
 
-  </div>
+        <div class="col-4 col-xl-3 input-control">
+          <label for="monthOfBirth" class="form-label">MONTH</label>
+          <input type="number" id="monthOfBirth" class="form-control" placeholder="MM" required>
+          <div class="feedback"></div>
+        </div>
 
-  <script src="script.js"></script>
+        <div class="col-4 col-xl-3 input-control">
+          <label for="yearOfBirth" class="form-label">YEAR</label>
+          <input type="number" id="yearOfBirth" class="form-control" placeholder="YYYY" required>
+          <div class="feedback"></div>
+        </div>
+
+      </form>
+
+      <hr>
+
+      <div>
+        <img class="icon-btn " id="calculate-age" src="./assets/images/icon-arrow.svg" alt="">
+      </div>
+
+      <div class="age-info">
+
+        <div class="d-flex align-items-center">
+          <span class="me-3 color-purple " id="years">--</span>
+          <h1 class="">years</h1>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <span class="me-3 color-purple " id="months">--</span>
+          <h1 class="">months</h1>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <span class="me-3 color-purple" id="days">--</span>
+          <h1 class="">days</h1>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+  integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
 </html>
