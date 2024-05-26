@@ -1,13 +1,12 @@
 # Age Calculator App
 
-![Design preview for the Age Calculator app coding challenge](./design/desktop-preview.jpg)
-
 ## Welcome! 👋
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [How to setup the project](#how-to-setup-the-project)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -37,56 +36,84 @@ Users should be able to:
 
 I have ensured to provide an intuitive user experience with responsive design and error handling for accurate age calculation.
 
+### How to setup the project
+
+To set up the project locally, follow these steps:
+
+1. Clone the repository using GitHub Desktop or Git Bash:
+   ```bash
+   https://github.com/SartHak-0-Sach/Age-calculator-app_frontend_project.git
+   ```
+2. Open the project folder in your code editor.
+3. Run the project using a live server extension or deploy it using Netlify, Vercel, or another web hosting and deployment service.
+
 ### Screenshot
 
-![](./screenshot.jpg)
+![Design preview for the Age Calculator app coding challenge](./design/active-states.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [link to this repo](https://github.com/SartHak-0-Sach/Age-calculator-app_frontend_project)
+- Live Site URL: [live site URL](https://age-calculator-app-frontend.netlify.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
+- DOM manipulation
 - Vanilla JavaScript
 
 You will find all the required assets in the `/design` folder. The assets are already optimized.
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project requires programmer to be well versed with date and time methods of JavaScript along with DOM manipulation to show error as shown below
 
-(Examples of code snippets that I will add from my code)
+
+<b>js = proud of this function</b>
+
+```
+function onError(element, message) {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector(".feedback");
+    const input = inputControl.querySelector(".form-control");
+    const label = inputControl.querySelector(".form-label");
+    label.classList.add("color-red");
+    input.classList.add("border-red");
+    errorDisplay.innerHTML = `<p class="color-red validation-text error">${message}</p>`;
+    inputControl.classList.remove("success");
+}
+```
 
 ### Continued development
 
-The Age Calculator App project helped me enhance my skills in form validation, responsive design, and error handling in JavaScript. In future projects, I aim to explore more advanced techniques for animation and user interaction.
+The continuously learning journey of a programmer never ends. This project made me realize that there are many concepts that I need to work upon including fundamentals like flex-box and its properties, to more complex concepts like working with fetch and async await in javascript. These areas are some that I think I need to work more upon in the upcoming future as they highlight some of the most significant regions of web development that are important for every developer to know of. 
+
+These key points mentioned here will help me grow accountable and consistent towards improving at writing good quality code and be a successful full stack developer one day.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [mdn documentation DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) - This is an amazing article which helped me finally understand promises, async and await syntax. I'd recommend it to anyone still learning this concept.
+- [mdn documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) - Another documentation link to refer to date() methods.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-portfolio-site.com)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+<b><strong>Sarthak Sachdev</strong></b>
+- Website - [Sarthak Sachdev](https://itsmesarthak.netlify.app/)
+- LeetCode - [@sarthak_sachdev](https://leetcode.com/u/sarthak_sachdev/)
+- Twitter - [@sarthak_sach69](https://www.twitter.com/sarthak_sach69)
 
 ## Acknowledgments
 
-I'd like to acknowledge the support from the developer community on forums and platforms like Discord. Their insights and feedback have been invaluable in improving my skills and approaches to solving challenges.
+I feel like the solutions provided on the website and the continuous doubt solving by industry experts on discord for free is something that is unmatched by anyone else and need to be acknowledged for their efforts in improving me as a developer by suggesting the best practices in your respective tech stack.
 
 ## Got feedback for me?
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email 'hi' at saarsaach[at]gmail[dot]com.
+I love receiving feedback! I am always looking to improve my code and take up new innovative ideas to work upon. So if you have anything you'd like to mention, please email 'hi' at saarsaach30[at]gmail[dot]com.
 
-If you found this project helpful, consider sharing it with others to spread the knowledge!
+If you liked this project make sure to spread the word and share it with all your friends.
 
 **Happy calculating!** ☺️🚀
